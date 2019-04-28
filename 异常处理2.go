@@ -35,5 +35,13 @@ func main() {
   if _, errorMsg := Divide(100, 0); errorMsg != "" {
     fmt.Println("errorMsg is", errorMsg)
 
+    //正常情况
+    if result, errMsg := Divide(100, 10); errMsg == "" {
+      fmt.Println("100/10结果:", result)
+    }
+    //异常情况
+    if _, errorMsg := Divide(100, 0); errorMsg != "" {
+      fmt.Println("errorMsg is", errorMsg)
+    }
   }
 }
