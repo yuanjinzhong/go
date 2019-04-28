@@ -15,5 +15,11 @@ func getSquareRoot(x int) (int, error) {
 }
 
 func main() {
-  fmt.Println(getSquareRoot(-1))
+  result, err := getSquareRoot(2)
+  if err != nil {
+    fmt.Println(err)
+
+  } else {
+    fmt.Println(result)
+  }
 }
