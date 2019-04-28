@@ -28,13 +28,6 @@ func Divide(varDividee int, varDivider int) (result int, errMsg string) {
 }
 
 func main() {
-  if result, errMsg := Divide(100, 10); errMsg == "" {
-    fmt.Println("100/10结果:", result)
-
-  }
-  if _, errorMsg := Divide(100, 0); errorMsg != "" {
-    fmt.Println("errorMsg is", errorMsg)
-
     //正常情况
     if result, errMsg := Divide(100, 10); errMsg == "" {
       fmt.Println("100/10结果:", result)
@@ -43,5 +36,4 @@ func main() {
     if _, errorMsg := Divide(100, 0); errorMsg != "" {
       fmt.Println("errorMsg is", errorMsg)
     }
-  }
 }
