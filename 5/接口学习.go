@@ -7,7 +7,7 @@ type Phone interface {
 }
 
 type NokiaPhone struct {
-  
+
 }
 
 func (nokia NokiaPhone) call()  {
