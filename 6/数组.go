@@ -11,4 +11,8 @@ func main() {
   }
 fmt.Println("数组的地址是",&age)
 
+  var a int = 10
+
+  fmt.Printf("变量的地址: %x\n", &a  )
+
 }
