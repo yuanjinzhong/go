@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var age [4] int
+var age =[4] int{1,2,3,4}
 
 func main() {
 
