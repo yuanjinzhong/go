@@ -1,4 +1,4 @@
-package slice
+package slice11
 
 import (
   "fmt"
@@ -54,14 +54,20 @@ func TestArraySlice(t *testing.T) {
   t.Log("the type of myslice", reflect.TypeOf(mySlice))
   t.Log("the type of myArr", reflect.TypeOf(myArr))
 
-  t.Log("--------------'make'a way to create slice ---------------------------------------------------------")
+  t.Log("--------------'make'a way to create slice11 ---------------------------------------------------------")
 
   mySlice2 := make([]int, 2, 3)
   mySlice2[0] = 1
   mySlice2[1] = 2
-  t.Log("slice value created by the way of make: ", mySlice2)
-  t.Log("slice capacity created by the way of make: ", cap(mySlice2))
-  t.Log("slice len created by the way of make :", len(mySlice2))
-  t.Log("slice type created by the way of make :", reflect.TypeOf(mySlice2))
+  t.Log("slice11 value created by the way of make: ", mySlice2)
+  t.Log("slice11 capacity created by the way of make: ", cap(mySlice2))
+  t.Log("slice11 len created by the way of make :", len(mySlice2))
+  t.Log("slice11 type created by the way of make :", reflect.TypeOf(mySlice2))
+  //切片的追加
+  t.Log(append(mySlice, 3, 3, 9, 88))
+  mySlice3 := make([]int, 2, 2)
+  //切片的复制
+  copy(mySlice3, mySlice)
+  t.Log(mySlice3)
 
 }

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	xxx "go/yjz/stringutils"
+	xxx "go/yjz12/stringutils"
 )
 
 func main() {
