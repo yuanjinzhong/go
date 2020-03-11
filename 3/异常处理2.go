@@ -6,6 +6,10 @@ type DivideError struct {
   dividee int
   divider int
 }
+type YuanJinz struct {
+  name string
+  age byte
+}
 
 func (de *DivideError) Error() string {
   strFormat := `
@@ -28,6 +32,11 @@ func Divide(varDividee int, varDivider int) (result int, errMsg string) {
 }
 
 func main() {
+  YuanJinz:=new(YuanJinz)
+  YuanJinz.name="Azhon"
+  YuanJinz.age=255
+  fmt.Println(YuanJinz)
+
     //正常情况
     if result, errMsg := Divide(100, 10); errMsg == "" {
       fmt.Println("100/10结果:", result)
