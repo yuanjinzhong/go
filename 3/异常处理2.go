@@ -1,6 +1,7 @@
 package main
 
-import "fmt"
+import ("fmt"
+"reflect")
 
 type DivideError struct {
   dividee int
@@ -32,10 +33,15 @@ func Divide(varDividee int, varDivider int) (result int, errMsg string) {
 }
 
 func main() {
-  YuanJinz:=new(YuanJinz)
-  YuanJinz.name="Azhon"
-  YuanJinz.age=255
-  fmt.Println(YuanJinz)
+  YuanJinz2:=new(YuanJinz)
+  YuanJinz2.name="Azhon"
+  YuanJinz2.age=255
+  fmt.Println(YuanJinz2.name)
+  fmt.Println(reflect.TypeOf(YuanJinz2))
+
+  yjz:=YuanJinz{"yjz",28}
+  fmt.Println(yjz.name)
+  fmt.Println(reflect.TypeOf(yjz))
 
     //正常情况
     if result, errMsg := Divide(100, 10); errMsg == "" {
