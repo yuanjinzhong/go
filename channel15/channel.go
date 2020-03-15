@@ -8,19 +8,19 @@ import "fmt"
 //var chanel = make(chan int)  不带缓冲的
 
 func sum(arr []int, c chan int) {
-  sum := 0
-  for _, v := range arr {
-    sum += v
-  }
-  c <- sum
+	sum := 0
+	for _, v := range arr {
+		sum += v
+	}
+	c <- sum
 }
 
 func main() {
-  arr := [...]int{1, 2, 3, 4, 5}
-  channel := make(chan int)
-  go sum(arr[:3], channel)
-  go sum(arr[4:], channel)
+	arr := [...]int{1, 2, 3, 4, 5}
+	channel := make(chan int)
+	go sum(arr[:3], channel)
+	go sum(arr[4:], channel)
 
-  x, y := <-channel, <-channel
-  fmt.Println("2通道里面的结果为", x+y)
+	x, y := <-channel, <-channel
+	fmt.Println("2通道里面的结果为", x+y)
 }
