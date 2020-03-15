@@ -1,8 +1,8 @@
 package main
 
 import (
-  "flag"
-  "fmt"
+	"flag"
+	"fmt"
 )
 
 //flag包学习
@@ -18,8 +18,7 @@ Usage of C:\Users\yuanjz\AppData\Local\Temp\go-build256883454\b001\exe\flag_lear
 exit status 2
 */
 
-
 func main() {
-  flag.Parse();
-  fmt.Println(*mode)
+	flag.Parse()
+	fmt.Println(*mode)
 }
